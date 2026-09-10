@@ -8,7 +8,9 @@ import os
 import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = os.path.join(HERE, "random100_eval.json")
+SRC = os.path.join(HERE, "stratified150_eval.json")
+if not os.path.exists(SRC):
+    SRC = os.path.join(HERE, "random100_eval.json")
 OUT = os.path.join(HERE, "dashboard.html")
 
 CLASSES = ["positive", "negative", "neutral"]
@@ -44,7 +46,10 @@ def esc(s):
 
 def main():
     with open(SRC, "r", encoding="utf-8") as fh:
-        records = json.load(fh)
+        data = json.load(fh)
+    # Support both the metadata-wrapped format and a plain list.
+    meta = data.get("meta", {}) if isinstance(data, dict) else {}
+    records = data["records"] if isinstance(data, dict) else data
     n, correct, acc, cm, metrics, star_dist, llm_dist, mismatches = compute(records)
 
     data_js = json.dumps(records, ensure_ascii=False)
@@ -169,6 +174,9 @@ def main():
   .b.neu{{ background:rgba(224,163,60,.18); color:var(--neu); }}
   .b.unk{{ background:rgba(123,135,148,.22); color:var(--unk); }}
   .ok {{ color:var(--pos); font-weight:700; }} .bad {{ color:var(--neg); font-weight:700; }}
+  .eb {{ display:inline-block; padding:2px 9px; border-radius:999px; font-size:11px; font-weight:600;
+    background:rgba(139,149,165,.16); color:var(--fg); }}
+  .mut {{ color:var(--mut); font-size:12px; }}
   .mismrow {{ background:rgba(229,83,75,.06); }}
   .count {{ color:var(--mut); font-size:13px; margin:4px 2px 10px; }}
 </style>
@@ -176,13 +184,13 @@ def main():
 <body>
 <header>
   <h1>🍀 Amazon Gift Cards · LLM Sentiment Evaluation</h1>
-  <span class="tag">Random sample of 100 reviews (seed 42) from {n:,} records · model DeepSeek-V4-Flash-0731 · {correct}/{n} = {acc:.1%} accurate · generated {time.strftime('%b %d %Y, %H:%M')}</span>
+  <span class="tag">{esc(meta.get('description', f'{n} reviews'))} · model {esc(meta.get('model', 'DeepSeek-V4-Flash-0731'))} · {correct}/{n} = {acc:.1%} accurate · generated {time.strftime('%b %d %Y, %H:%M')}</span>
 </header>
 <main>
 
   <section class="cards">
     <div class="card acc"><div class="k">Accuracy</div><div class="v">{acc:.1%}</div><div class="s">{correct} / {n} correct</div></div>
-    <div class="card"><div class="k">Reviews tested</div><div class="v">{n}</div><div class="s">random sample, seed 42</div></div>
+    <div class="card"><div class="k">Reviews tested</div><div class="v">{n}</div><div class="s">{esc(meta.get('sample','sample'))}, seed {meta.get('seed','—')}</div></div>
     <div class="card green"><div class="k">Positive (4–5★)</div><div class="v">{star_dist['positive']}</div><div class="s">{metrics['positive']['f1']:.2f} F1</div></div>
     <div class="card red"><div class="k">Negative (1–2★)</div><div class="v">{star_dist['negative']}</div><div class="s">{metrics['negative']['f1']:.2f} F1</div></div>
     <div class="card amber"><div class="k">Neutral (3★)</div><div class="v">{star_dist['neutral']}</div><div class="s">{metrics['neutral']['f1']:.2f} F1</div></div>
@@ -240,7 +248,8 @@ def main():
         <thead><tr>
           <th data-sort="index">#</th><th data-sort="rating">Rating</th>
           <th data-sort="title">Title</th><th data-sort="text">Review text</th>
-          <th data-sort="star_label">Star → truth</th><th data-sort="llm_label">LLM</th><th>Status</th>
+          <th data-sort="star_label">Star → truth</th><th data-sort="llm_label">LLM</th><th data-sort="llm_emotion">LLM emo</th><th data-sort="nrc_emotion">NRC emo</th><th>Emo match</th><th>Status</th>
+
         </tr></thead>
         <tbody id="rows"></tbody>
       </table>
@@ -260,6 +269,17 @@ function sentLabel(b){{
 function stars(r){{
   const s='★'.repeat(Math.round(r))+'☆'.repeat(5-Math.round(r));
   return `<span class="stars">${{s}}</span>`;
+}}
+function emoCell(raw,map){{
+  if(!raw) return '<span class="mut">—</span>';
+  const shown = map || raw;
+  const tag = map ? '' : ' <span class="mut">(unmapped)</span>';
+  return '<span class="eb">'+esc(shown)+'</span>'+tag;
+}}
+function emoMatch(r){{
+  return (r.emotion_match===null||r.emotion_match===undefined||r.emotion_match==='')
+    ? '<span class="mut">—</span>'
+    : (r.emotion_match===true ? '<span class="ok">✔</span>' : '<span class="bad">✖</span>');
 }}
 function esc(s){{ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }}
 
@@ -290,6 +310,9 @@ function render(){{
       <td><span class="txt">${{esc(r.text)||'—'}}</span></td>
       <td>${{sentLabel(r.star_label)}}</td>
       <td>${{sentLabel(r.llm_label)}}</td>
+      <td>${{emoCell(r.llm_emotion_raw, r.llm_emotion)}}</td>
+      <td>${{emoCell(r.nrc_emotion)}}</td>
+      <td>${{emoMatch(r)}}</td>
       <td>${{r.correct?'<span class="ok">✔ correct</span>':'<span class="bad">✖ mismatch</span>'}}</td>
     </tr>`
   ).join('');

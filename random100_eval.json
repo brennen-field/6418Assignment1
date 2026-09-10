@@ -6,6 +6,10 @@
     "rating": 4.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "relief",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -15,6 +19,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "anticipation",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -24,6 +32,10 @@
     "rating": 1.0,
     "star_label": "negative",
     "llm_label": "negative",
+    "llm_emotion_raw": "annoyance",
+    "llm_emotion": "anger",
+    "nrc_emotion": "trust",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -33,6 +45,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "relief",
+    "llm_emotion": "joy",
+    "nrc_emotion": "anticipation",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -42,6 +58,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -51,6 +71,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -60,6 +84,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "gratitude",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -69,6 +97,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -78,6 +110,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -87,6 +123,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -96,6 +136,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -105,6 +149,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "gratitude",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -113,7 +161,11 @@
     "text": "It reloaded",
     "rating": 4.0,
     "star_label": "positive",
-    "llm_label": "neutral",
+    "llm_label": "unknown",
+    "llm_emotion_raw": "unknown",
+    "llm_emotion": null,
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": false
   },
   {
@@ -123,6 +175,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "excitement",
+    "llm_emotion": "anticipation",
+    "nrc_emotion": "joy",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -132,6 +188,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -141,6 +201,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -150,6 +214,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "excitement",
+    "llm_emotion": "anticipation",
+    "nrc_emotion": "joy",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -159,6 +227,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "approval",
+    "llm_emotion": "trust",
+    "nrc_emotion": "joy",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -168,6 +240,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -177,6 +253,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -186,6 +266,10 @@
     "rating": 4.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -195,6 +279,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -204,6 +292,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "neutral",
+    "llm_emotion_raw": "neutral",
+    "llm_emotion": null,
+    "nrc_emotion": "joy",
+    "emotion_match": null,
     "correct": false
   },
   {
@@ -213,6 +305,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -222,6 +318,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "excitement",
+    "llm_emotion": "anticipation",
+    "nrc_emotion": "joy",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -231,6 +331,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "gratitude",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -240,6 +344,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -249,6 +357,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -258,6 +370,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -267,6 +383,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -276,6 +396,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -285,6 +409,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "relief",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -294,6 +422,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -303,6 +435,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -312,6 +448,10 @@
     "rating": 4.0,
     "star_label": "positive",
     "llm_label": "negative",
+    "llm_emotion_raw": "frustration",
+    "llm_emotion": "anger",
+    "nrc_emotion": "trust",
+    "emotion_match": false,
     "correct": false
   },
   {
@@ -321,6 +461,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -330,6 +474,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -339,6 +487,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "neutral",
+    "llm_emotion_raw": "neutral",
+    "llm_emotion": null,
+    "nrc_emotion": "joy",
+    "emotion_match": null,
     "correct": false
   },
   {
@@ -348,6 +500,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -357,6 +513,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "excitement",
+    "llm_emotion": "anticipation",
+    "nrc_emotion": "joy",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -366,6 +526,10 @@
     "rating": 4.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -375,6 +539,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -384,6 +552,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -393,6 +565,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -402,6 +578,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "gratitude",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -411,6 +591,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -420,6 +604,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -429,6 +617,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -438,6 +630,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "trust",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -447,6 +643,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -456,6 +656,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "anticipation",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -465,6 +669,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -474,6 +682,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "amusement",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -483,6 +695,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "anticipation",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -492,6 +708,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -501,6 +721,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "anticipation",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -510,6 +734,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -519,6 +747,10 @@
     "rating": 1.0,
     "star_label": "negative",
     "llm_label": "negative",
+    "llm_emotion_raw": "frustration",
+    "llm_emotion": "anger",
+    "nrc_emotion": "anger",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -528,6 +760,10 @@
     "rating": 1.0,
     "star_label": "negative",
     "llm_label": "negative",
+    "llm_emotion_raw": "disappointment",
+    "llm_emotion": "sadness",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -537,6 +773,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "trust",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -546,6 +786,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -555,6 +799,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "contentment",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -564,6 +812,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -573,6 +825,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -582,6 +838,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "amusement",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -591,6 +851,10 @@
     "rating": 1.0,
     "star_label": "negative",
     "llm_label": "negative",
+    "llm_emotion_raw": "anger",
+    "llm_emotion": "anger",
+    "nrc_emotion": "trust",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -600,6 +864,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -608,8 +876,12 @@
     "text": "Arrived quickly. Looks nice except the cutout on the back of the tin- you see a barcode not Merry Christmas so the picture is misleading. You could flip the gift card over but then it would look silly when they open the tin.",
     "rating": 4.0,
     "star_label": "positive",
-    "llm_label": "negative",
-    "correct": false
+    "llm_label": "positive",
+    "llm_emotion_raw": "disappointment",
+    "llm_emotion": "sadness",
+    "nrc_emotion": "joy",
+    "emotion_match": false,
+    "correct": true
   },
   {
     "index": 94800,
@@ -618,6 +890,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "anticipation",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -627,6 +903,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -636,6 +916,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -645,6 +929,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -654,6 +942,10 @@
     "rating": 1.0,
     "star_label": "negative",
     "llm_label": "negative",
+    "llm_emotion_raw": "anger",
+    "llm_emotion": "anger",
+    "nrc_emotion": "anticipation",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -663,6 +955,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "anticipation",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -672,6 +968,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -681,6 +981,10 @@
     "rating": 3.0,
     "star_label": "neutral",
     "llm_label": "negative",
+    "llm_emotion_raw": "disappointment",
+    "llm_emotion": "sadness",
+    "nrc_emotion": "joy",
+    "emotion_match": false,
     "correct": false
   },
   {
@@ -689,7 +993,11 @@
     "text": "It's a gift card in nice packaging with no overhead cost to the consumer. Fairly common practice, but a nice touch -- however the box does ruin the surprise!",
     "rating": 5.0,
     "star_label": "positive",
-    "llm_label": "neutral",
+    "llm_label": "unknown",
+    "llm_emotion_raw": "unknown",
+    "llm_emotion": null,
+    "nrc_emotion": "joy",
+    "emotion_match": null,
     "correct": false
   },
   {
@@ -699,6 +1007,10 @@
     "rating": 1.0,
     "star_label": "negative",
     "llm_label": "negative",
+    "llm_emotion_raw": "frustration",
+    "llm_emotion": "anger",
+    "nrc_emotion": "joy",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -708,6 +1020,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -717,6 +1033,10 @@
     "rating": 4.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -726,6 +1046,10 @@
     "rating": 4.0,
     "star_label": "positive",
     "llm_label": "negative",
+    "llm_emotion_raw": "disappointment",
+    "llm_emotion": "sadness",
+    "nrc_emotion": "anticipation",
+    "emotion_match": false,
     "correct": false
   },
   {
@@ -735,6 +1059,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -744,6 +1072,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -753,6 +1085,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -762,6 +1098,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -771,6 +1111,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -780,6 +1124,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "trust",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -789,6 +1137,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -798,6 +1150,10 @@
     "rating": 3.0,
     "star_label": "neutral",
     "llm_label": "negative",
+    "llm_emotion_raw": "disappointment",
+    "llm_emotion": "sadness",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": false
   },
   {
@@ -807,6 +1163,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -816,6 +1176,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "joy",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -825,6 +1189,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -834,6 +1202,10 @@
     "rating": 1.0,
     "star_label": "negative",
     "llm_label": "negative",
+    "llm_emotion_raw": "disappointment",
+    "llm_emotion": "sadness",
+    "nrc_emotion": "sadness",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -843,6 +1215,10 @@
     "rating": 1.0,
     "star_label": "negative",
     "llm_label": "negative",
+    "llm_emotion_raw": "anger",
+    "llm_emotion": "anger",
+    "nrc_emotion": "joy",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -852,6 +1228,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -861,6 +1241,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   },
   {
@@ -870,6 +1254,10 @@
     "rating": 1.0,
     "star_label": "negative",
     "llm_label": "negative",
+    "llm_emotion_raw": "disappointment",
+    "llm_emotion": "sadness",
+    "nrc_emotion": "anticipation",
+    "emotion_match": false,
     "correct": true
   },
   {
@@ -879,6 +1267,10 @@
     "rating": 1.0,
     "star_label": "negative",
     "llm_label": "negative",
+    "llm_emotion_raw": "frustration",
+    "llm_emotion": "anger",
+    "nrc_emotion": null,
+    "emotion_match": null,
     "correct": true
   },
   {
@@ -888,6 +1280,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "neutral",
+    "llm_emotion_raw": "indifference",
+    "llm_emotion": null,
+    "nrc_emotion": "joy",
+    "emotion_match": null,
     "correct": false
   },
   {
@@ -897,6 +1293,10 @@
     "rating": 5.0,
     "star_label": "positive",
     "llm_label": "positive",
+    "llm_emotion_raw": "satisfaction",
+    "llm_emotion": "joy",
+    "nrc_emotion": "joy",
+    "emotion_match": true,
     "correct": true
   }
 ]
