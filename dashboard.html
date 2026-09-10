@@ -97,7 +97,7 @@
 <body>
 <header>
   <h1>🍀 Amazon Gift Cards · LLM Sentiment Evaluation</h1>
-  <span class="tag">Stratified random sample of 150 reviews (50 positive / 50 neutral / 50 negative), seed 42 · model DeepSeek-V4-Flash-0731 · 104/150 = 69.3% accurate · generated Sep 10 2026, 10:56</span>
+  <span class="tag">Stratified random sample of 150 reviews (50 positive / 50 neutral / 50 negative), seed 42 · model DeepSeek-V4-Flash-0731 · 104/150 = 69.3% accurate · generated Sep 10 2026, 12:25</span>
 </header>
 <main>
 
@@ -134,6 +134,27 @@
       </div>
       <div class="dlabels">
         <span class="positive">LLM positive: 56</span><span class="negative">LLM negative: 84</span><span class="neutral">LLM neutral: 10</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" style="margin-bottom:26px">
+    <h2>Model effectiveness: predicted vs actual per class</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start;">
+      <svg viewBox="0 0 720 300" width="100%" style="max-width:720px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Predicted vs actual by class"><rect x="50" y="16" width="12" height="12" rx="2" fill="#6ea8fe"/><text x="68" y="26" font-size="11" fill="#e6ebf2">Actual (star truth)</text><rect x="210" y="16" width="12" height="12" rx="2" fill="#6ea8fe" opacity="0.35" stroke="#6ea8fe" stroke-width="1.5"/><text x="228" y="26" font-size="11" fill="#e6ebf2">Predicted (LLM)</text><line x1="50" y1="254.0" x2="695" y2="254.0" stroke="#2a3342" stroke-width="1"/><text x="44" y="258.0" font-size="11" fill="#8b95a5" text-anchor="end">0</text><line x1="50" y1="150.0" x2="695" y2="150.0" stroke="#2a3342" stroke-width="1"/><text x="44" y="154.0" font-size="11" fill="#8b95a5" text-anchor="end">40</text><line x1="50" y1="46.0" x2="695" y2="46.0" stroke="#2a3342" stroke-width="1"/><text x="44" y="50.0" font-size="11" fill="#8b95a5" text-anchor="end">80</text><rect x="84.4" y="124.0" width="64.0" height="130.0" rx="4" fill="#2fbf71" opacity="0.95"/><text x="116.4" y="118.0" font-size="11" font-weight="700" fill="#e6ebf2" text-anchor="middle">50</text><rect x="161.8" y="108.4" width="64.0" height="145.6" rx="4" fill="#2fbf71" opacity="0.35" stroke="#2fbf71" stroke-width="1.5"/><text x="193.8" y="102.4" font-size="11" font-weight="700" fill="#e6ebf2" text-anchor="middle">56</text><text x="157.5" y="278.0" font-size="13" font-weight="600" fill="#e6ebf2" text-anchor="middle">positive</text><rect x="299.4" y="124.0" width="64.0" height="130.0" rx="4" fill="#e0a33c" opacity="0.95"/><text x="331.4" y="118.0" font-size="11" font-weight="700" fill="#e6ebf2" text-anchor="middle">50</text><rect x="376.8" y="228.0" width="64.0" height="26.0" rx="4" fill="#e0a33c" opacity="0.35" stroke="#e0a33c" stroke-width="1.5"/><text x="408.8" y="222.0" font-size="11" font-weight="700" fill="#e6ebf2" text-anchor="middle">10</text><text x="372.5" y="278.0" font-size="13" font-weight="600" fill="#e6ebf2" text-anchor="middle">neutral</text><rect x="514.4" y="124.0" width="64.0" height="130.0" rx="4" fill="#e5534b" opacity="0.95"/><text x="546.4" y="118.0" font-size="11" font-weight="700" fill="#e6ebf2" text-anchor="middle">50</text><rect x="591.8" y="35.6" width="64.0" height="218.4" rx="4" fill="#e5534b" opacity="0.35" stroke="#e5534b" stroke-width="1.5"/><text x="623.8" y="29.6" font-size="11" font-weight="700" fill="#e6ebf2" text-anchor="middle">84</text><text x="587.5" y="278.0" font-size="13" font-weight="600" fill="#e6ebf2" text-anchor="middle">negative</text></svg>
+      <div style="min-width:220px; flex:1;">
+        <table style="width:100%; font-size:13px; border-collapse:collapse;">
+          <thead><tr>
+            <th style="text-align:left; padding:8px 10px; color:var(--mut); font-size:11px; text-transform:uppercase; letter-spacing:.6px; border-bottom:1px solid var(--line);">class</th>
+            <th style="text-align:center; padding:8px 10px; color:var(--mut); font-size:11px; border-bottom:1px solid var(--line);">actual (star)</th>
+            <th style="text-align:center; padding:8px 10px; color:var(--mut); font-size:11px; border-bottom:1px solid var(--line);">predicted (LLM)</th>
+            <th style="text-align:center; padding:8px 10px; color:var(--mut); font-size:11px; border-bottom:1px solid var(--line);">recall</th>
+          </tr></thead>
+          <tbody>
+            <tr><td style="padding:8px 10px; border-bottom:1px solid var(--line);"><span class="cls positive">positive</span></td><td style="text-align:center; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:700;">50</td><td style="text-align:center; padding:8px 10px; border-bottom:1px solid var(--line);">56</td><td style="text-align:center; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:700;">96%</td></tr><tr><td style="padding:8px 10px; border-bottom:1px solid var(--line);"><span class="cls neutral">neutral</span></td><td style="text-align:center; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:700;">50</td><td style="text-align:center; padding:8px 10px; border-bottom:1px solid var(--line);">10</td><td style="text-align:center; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:700;">16%</td></tr><tr><td style="padding:8px 10px; border-bottom:1px solid var(--line);"><span class="cls negative">negative</span></td><td style="text-align:center; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:700;">50</td><td style="text-align:center; padding:8px 10px; border-bottom:1px solid var(--line);">84</td><td style="text-align:center; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:700;">96%</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px; font-size:12px; color:var(--mut);">Gap between the two bars per class = where the model is over- or under-predicting that sentiment.</div>
       </div>
     </div>
   </section>

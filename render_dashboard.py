@@ -44,6 +44,68 @@ def esc(s):
             .replace('"', "&quot;"))
 
 
+_CLASS_COLORS = {"positive": "#2fbf71", "neutral": "#e0a33c", "negative": "#e5534b"}
+_CLASS_ORDER = ["positive", "neutral", "negative"]
+
+
+def chart_svg(star_dist, llm_dist):
+    """Self-contained SVG grouped bar chart: actual (star-truth) vs predicted
+    (LLM) count per sentiment class."""
+    actual = [star_dist.get(c, 0) for c in _CLASS_ORDER]
+    pred = [llm_dist.get(c, 0) for c in _CLASS_ORDER]
+    nclass = len(_CLASS_ORDER)
+
+    W, H, L, R, T, B = 720, 300, 50, 25, 46, 46
+    pw, ph = W - L - R, H - T - B
+    ytop = max((max(actual + pred) // 10) * 10, 10) or 10
+    ytop = max(ytop, 10)
+    ticks = sorted({0, ytop // 2 if ytop > 10 else 10, ytop})
+    if ytop <= 10:
+        ticks = [0, 5, 10]
+
+    def barh(v):
+        return v / ytop * ph
+
+    parts = []
+    # Legend (data series)
+    ly = 26
+    parts.append(
+        f'<rect x="{L}" y="{ly-10}" width="12" height="12" rx="2" fill="#6ea8fe"/>'
+        f'<text x="{L+18}" y="{ly}" font-size="11" fill="#e6ebf2">Actual (star truth)</text>'
+        f'<rect x="{L+160}" y="{ly-10}" width="12" height="12" rx="2" fill="#6ea8fe" opacity="0.35" stroke="#6ea8fe" stroke-width="1.5"/>'
+        f'<text x="{L+178}" y="{ly}" font-size="11" fill="#e6ebf2">Predicted (LLM)</text>'
+    )
+    # Gridlines + y labels
+    for t in ticks:
+        y = H - B - barh(t)
+        parts.append(f'<line x1="{L}" y1="{y:.1f}" x2="{W-R}" y2="{y:.1f}" stroke="#2a3342" stroke-width="1"/>')
+        parts.append(f'<text x="{L-6}" y="{y+4:.1f}" font-size="11" fill="#8b95a5" text-anchor="end">{t:g}</text>')
+    # Bars + labels per class
+    gw = pw / nclass
+    for ci, c in enumerate(_CLASS_ORDER):
+        col = _CLASS_COLORS[c]
+        gx = L + ci * gw
+        bw = min(gw * 0.30, 64)
+        # actual bar (left, solid)
+        xa = gx + gw * 0.16
+        va, yha = actual[ci], barh(actual[ci])
+        if va:
+            parts.append(f'<rect x="{xa:.1f}" y="{H-B-yha:.1f}" width="{bw:.1f}" height="{yha:.1f}" rx="4" fill="{col}" opacity="0.95"/>')
+        parts.append(f'<text x="{xa+bw/2:.1f}" y="{H-B-yha-6:.1f}" font-size="11" font-weight="700" fill="#e6ebf2" text-anchor="middle">{va}</text>')
+        # predicted bar (right, translucent + outline)
+        xp = gx + gw * 0.52
+        vp, yhp = pred[ci], barh(pred[ci])
+        if vp:
+            parts.append(f'<rect x="{xp:.1f}" y="{H-B-yhp:.1f}" width="{bw:.1f}" height="{yhp:.1f}" rx="4" fill="{col}" opacity="0.35" stroke="{col}" stroke-width="1.5"/>')
+        parts.append(f'<text x="{xp+bw/2:.1f}" y="{H-B-yhp-6:.1f}" font-size="11" font-weight="700" fill="#e6ebf2" text-anchor="middle">{vp}</text>')
+        # class label
+        parts.append(f'<text x="{gx+gw/2:.1f}" y="{H-B+24:.1f}" font-size="13" font-weight="600" fill="#e6ebf2" text-anchor="middle">{c}</text>')
+
+    return (f'<svg viewBox="0 0 {W} {H}" width="100%" style="max-width:720px" '
+            f'xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Predicted vs actual by class">'
+            + "".join(parts) + "</svg>")
+
+
 def main():
     with open(SRC, "r", encoding="utf-8") as fh:
         data = json.load(fh)
@@ -53,6 +115,14 @@ def main():
     n, correct, acc, cm, metrics, star_dist, llm_dist, mismatches = compute(records)
 
     data_js = json.dumps(records, ensure_ascii=False)
+
+    # ---- Effectiveness chart (predicted vs actual) ----
+    recalls = {}
+    for cls in _CLASS_ORDER:
+        n_true = sum(1 for r in records if r["star_label"] == cls)
+        n_corr = sum(1 for r in records if r["star_label"] == cls and r["llm_label"] == cls)
+        recalls[cls] = (n_corr / n_true * 100) if n_true else 0
+    chart = chart_svg(star_dist, llm_dist)
 
     # ---- Helper fragments ----
     def cm_cell(t, p):
@@ -221,6 +291,33 @@ def main():
       </div>
       <div class="dlabels">
         {''.join(f'<span class="{c}">LLM {c}: {llm_dist[c]}</span>' for c in CLASSES)}
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" style="margin-bottom:26px">
+    <h2>Model effectiveness: predicted vs actual per class</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start;">
+      {chart}
+      <div style="min-width:220px; flex:1;">
+        <table style="width:100%; font-size:13px; border-collapse:collapse;">
+          <thead><tr>
+            <th style="text-align:left; padding:8px 10px; color:var(--mut); font-size:11px; text-transform:uppercase; letter-spacing:.6px; border-bottom:1px solid var(--line);">class</th>
+            <th style="text-align:center; padding:8px 10px; color:var(--mut); font-size:11px; border-bottom:1px solid var(--line);">actual (star)</th>
+            <th style="text-align:center; padding:8px 10px; color:var(--mut); font-size:11px; border-bottom:1px solid var(--line);">predicted (LLM)</th>
+            <th style="text-align:center; padding:8px 10px; color:var(--mut); font-size:11px; border-bottom:1px solid var(--line);">recall</th>
+          </tr></thead>
+          <tbody>
+            {"".join(
+                '<tr>'
+                f'<td style="padding:8px 10px; border-bottom:1px solid var(--line);"><span class="cls {c}">{c}</span></td>'
+                f'<td style="text-align:center; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:700;">{star_dist[c]}</td>'
+                f'<td style="text-align:center; padding:8px 10px; border-bottom:1px solid var(--line);">{llm_dist[c]}</td>'
+                f'<td style="text-align:center; padding:8px 10px; border-bottom:1px solid var(--line); font-weight:700;">{recalls[c]:.0f}%</td>'
+                '</tr>' for c in _CLASS_ORDER)}
+          </tbody>
+        </table>
+        <div style="margin-top:12px; font-size:12px; color:var(--mut);">Gap between the two bars per class = where the model is over- or under-predicting that sentiment.</div>
       </div>
     </div>
   </section>
